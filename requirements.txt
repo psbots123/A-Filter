@@ -5,6 +5,7 @@ marshmallow
 umongo
 pymongo
 pytz
+openai
 cinemagoer
 shortzy
 aiohttp
