@@ -68,6 +68,7 @@ else:
     SUPPORT_GROUP = int(SUPPORT_GROUP)
 
 # for chatGPT
+PRE_IMG = environ.get("PRE_IMG")
 OWNER_ID = environ.get("OWNER_ID")
 OPENAI_API = environ.get('OPENAI_API', '')
 if len(OPENAI_API) == 0:
