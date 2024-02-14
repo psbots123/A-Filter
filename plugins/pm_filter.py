@@ -495,8 +495,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('❌ ᴄʟᴏsᴇ ❌', callback_data='close_data')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
+        me = await client.get_me()
         await query.message.edit_text(
-            text=script.MY_ABOUT_TXT.format(client.mention),
+            text=script.MY_ABOUT_TXT.format(me.mention),
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
