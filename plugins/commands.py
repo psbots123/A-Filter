@@ -123,6 +123,7 @@ async def start(client, message):
         if not files:
             return await message.reply('No Such All Files Exist!')
         settings = await get_settings(int(grp_id))
+        filesarr = []
         for file in files:
             CAPTION = settings['caption']
             f_caption = CAPTION.format(
