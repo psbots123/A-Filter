@@ -874,7 +874,8 @@ async def auto_filter(client, msg, spoll=False):
     CAP[key] = cap
     del_msg = f"\n\n<b>⚠️ ᴛʜɪs ᴍᴇssᴀɢᴇ ᴡɪʟʟ ʙᴇ ᴀᴜᴛᴏ ᴅᴇʟᴇᴛᴇ ᴀꜰᴛᴇʀ <code>{get_readable_time(DELETE_TIME)}</code> ᴛᴏ ᴀᴠᴏɪᴅ ᴄᴏᴘʏʀɪɢʜᴛ ɪssᴜᴇs</b>" if settings["auto_delete"] else ''
     if imdb and imdb.get('poster'):
-        try:get_readable_time
+        try:
+            get_readable_time
             if settings["auto_delete"]:
                 k = await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024] + files_link + del_msg, reply_markup=InlineKeyboardMarkup(btn))
                 await asyncio.sleep(DELETE_TIME)
@@ -966,5 +967,3 @@ async def advantage_spell_chok(message):
         await message.delete()
     except:
         pass
-
-
