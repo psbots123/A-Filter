@@ -216,12 +216,12 @@ async def get_shortlink(url, api, link):
     return link
 
 def get_readable_time(seconds):
-    periods = [('days', 86400), ('hours', 3600), ('minutes', 60), ('seconds', 1)]
+    periods = [('ᴅᴀʏꜱ', 86400), ('ʜᴏᴜʀꜱ', 3600), ('ᴍɪɴᴜᴛᴇꜱ', 60), ('ꜱᴇᴄᴏɴᴅꜱ', 1)]
     result = ''
     for period_name, period_seconds in periods:
         if seconds >= period_seconds:
             period_value, seconds = divmod(seconds, period_seconds)
-            result += f'{int(period_value)}{period_name}'
+            result += f'{int(period_value)} {period_name}'
     return result
 
 def get_wish():
