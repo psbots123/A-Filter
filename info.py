@@ -90,7 +90,7 @@ TUTORIAL = environ.get("TUTORIAL", "https://telegram.me/shareus_open_tutorial/3"
 VERIFY_TUTORIAL = environ.get("VERIFY_TUTORIAL", "https://telegram.me/shareus_open_tutorial/3")
 
 # Bot settings
-AUTO_DELETE = int(environ.get("AUTO_DELETE", 600)) #delete files after 10 min send by bot in pm 
+PM_DELETE = int(environ.get("PM_DELETE", 600)) #delete files after 10 min send by bot in pm 
 DELETE_TIME = int(environ.get('DELETE_TIME', 3600)) # Add time in seconds 
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
 MAX_BTN = int(environ.get('MAX_BTN', 10)) #don't change anything in Language 
